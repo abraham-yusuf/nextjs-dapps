@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <>
     <Header />
     <h1 className={styles['title-homepage']}>Blockchain Studio ID</h1>
+    <Footer />
     </>
   )
 }
