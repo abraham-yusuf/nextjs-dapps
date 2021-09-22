@@ -1,10 +1,12 @@
 import Layout from "../../components/Layout";
+import { useRouter} from "next/router";
 
 interface UserProps {
     dataUsers: Array<any>;
 }
 export default function Users(props: UserProps) {
     const {dataUsers} = props;
+    const router = useRouter();
 
     console.log(dataUsers);
     return(
@@ -12,10 +14,10 @@ export default function Users(props: UserProps) {
             <h1>User Pages</h1>
             {dataUsers.map(user => {
                 return (
-                    <>
+                    <div key={user.id} onClick={() => router.push(`/users/${user.id}`)}>
                      <p>{user.name}</p>
                      <br/>{user.email}
-                    </>
+                    </div>
                 )
             })}
         </Layout>
