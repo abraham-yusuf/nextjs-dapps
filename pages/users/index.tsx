@@ -1,6 +1,9 @@
 import Layout from "../../components/Layout";
 
-export default function Users(props) {
+interface UserProps {
+    dataUsers: Array<any>;
+}
+export default function Users(props: UserProps) {
     const {dataUsers} = props;
 
     console.log(dataUsers);
