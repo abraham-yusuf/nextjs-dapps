@@ -18,6 +18,7 @@ export default function Layout(props: LayoutProps) {
             {' '}
             {pageTitle}
         </title>
+        <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Learning Improving Envolving And Building Blockchain Studio ID" />
         </Head>
         <div className={style.container}>
