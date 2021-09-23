@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import styles from "../../styles/Users.module.css";
+import styles from "../styles/Blog.module.css";
 
 export default function Blog(props) {
     const {dataBlog} = props;
@@ -8,8 +8,8 @@ export default function Blog(props) {
             <h1 className="title">Blog pages</h1>
             {dataBlog.map(blog => {
                 return (
-                    <div key={blog.id} className={styles.blogcard}>
-                        <p>{blog.title}</p>
+                    <div key={blog.id} className={styles.card}>
+                        <h4>{blog.title}</h4>
                         <p>{blog.body}</p>
                     </div>
                 )
